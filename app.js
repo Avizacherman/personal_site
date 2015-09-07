@@ -15,4 +15,8 @@ app.get('/', function(req, res){
 	res.render('index.html.ejs')
 })
 
-app.listen(1500)
+app.post('/email', function(req, res){
+	res.redirect('/')
+})
+
+app.listen(80)
