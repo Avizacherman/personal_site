@@ -8,14 +8,27 @@ body, head, html {
   position: relative;
   z-index: 1;
   background: white;
+  box-shadow: -2px -2px 5px black;
 }
 
 #triangle {
-  width: 0;
-  height: 0;
-  border-left: 150px solid transparent;
-  border-right: 150px solid transparent;
-  border-bottom: 60px solid white;
+  position: relative;
+  color: white;
+  margin-top: -80px;
+  margin-bottom: -36px;
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  font-size: 10em;
+  z-index: 100;
+  text-shadow: -2px -2px black;
+}
+
+#triangle:hover {
+  cursor: default;
 }
 
 #link-list {
@@ -174,8 +187,8 @@ body, head, html {
 
 #transparency-pane {
   background-color: rgba(0,0,0,0);
-  min-height: 350px;
-  max-height: 60%;
+  min-height: 150px;
+  max-height: 40%;
   width: 84%;
   margin: 0 auto;
   z-index: 1;
