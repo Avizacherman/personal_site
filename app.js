@@ -15,4 +15,4 @@ app.get('/', function(req, res){
 	res.render('index.html.ejs')
 })
 
-app.listen(80)
+app.listen(1500)
