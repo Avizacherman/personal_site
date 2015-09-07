@@ -1,0 +1,184 @@
+body, head, html {
+  margin: 0;
+  padding: 0;
+}
+
+
+.wrapper {
+  position: relative;
+  z-index: 1;
+  background: white;
+}
+
+#triangle {
+  width: 0;
+  height: 0;
+  border-left: 150px solid transparent;
+  border-right: 150px solid transparent;
+  border-bottom: 60px solid white;
+}
+
+#link-list {
+  text-align: left;
+} 
+
+
+#avi-declare {
+  letter-spacing: 1em;
+  font-size: 3.5em;
+}
+
+#avi-picture-holder {
+  position: fixed; 
+  max-height: 20%;
+  min-height: 300px;
+  width: 84%;
+  left: 8%;
+  top: 0;
+  text-align: right;
+  z-index: -1;
+  animation-name: transition-bg;
+  -webkit-animation-name: transition-bg;
+  -moz-animation-name: transition-bg;
+  animation-iteration-count:  infinite;
+  -webkit-animation-iteration-count:  infinite;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-duration: 5s;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s; 
+ 
+}
+
+
+@keyframes transition-bg {
+  20% {
+  transition: background-image 2s ease-in;
+  transition-delay: 5s;
+  -webkit-transition: background-image 2s ease-in;
+  -webkit-transition-delay: 5s;
+  transition: background-image 2s ease-in;
+   background: url('../img/avi-beer-img.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;  
+  }
+  40% {
+  transition: background-image 2s ease-in;
+  transition-delay: 5s;
+  -webkit-transition: background-image 2s ease-in;
+  -webkit-transition-delay: 5s;
+  background: url('../img/avi-grill-pic1.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;  
+  }
+  60% {
+      transition: background-image 2s ease-in;
+      transition-delay: 5s;
+  -webkit-transition: background-image 2s ease-in;
+  -webkit-transition-delay: 5s;
+  background: url('../img/avi-grill-pic1.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;  
+  }
+  80% {
+      transition: background-image 2s ease-in;
+      transition-delay: 5s;
+  -webkit-transition: background-image 2s ease-in;
+  -webkit-transition-delay: 5s;
+  background: url('../img/avi-beer-img.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;  
+}
+  100%{
+  transition: background-image 2s ease-in;
+  transition-delay: 5s;
+  -webkit-transition: background-image 2s ease-in;
+  -webkit-transition-delay: 5s;
+  background: url('../img/avi-grill-pic1.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;  
+  }
+  
+  
+}
+
+#transparency-pane {
+  background-color: rgba(0,0,0,0);
+  max-height: 17%;
+  min-height: 230px;
+  width: 84%;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+@media only screen and (max-width: 1900px){
+  #avi-picture-holder {
+    position: fixed;
+    background: url('../img/avi-grill-pic1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 650px;
+    max-height: 80%;
+    width: 84%;
+    left: 8%;
+    top: 0;
+    text-align: right;
+    z-index: -1;
+  }
+
+  #transparency-pane {
+    background-color: rgba(0,0,0,0);
+    height: 580px;
+    max-height: 74%;
+    width: 84%;
+    margin: 0 auto;
+    z-index: 1;
+  }
+}
+
+
+@media only screen and (max-width: 992px){
+#avi-picture-holder {
+  max-height: 80%;
+  min-height: 520px;
+  
+}
+
+#transparency-pane {
+  background-color: rgba(0,0,0,0);
+  max-height: 74%;
+  min-height: 450px;
+  width: 84%;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+}
+
+@media only screen and (max-width: 767px){
+    #avi-declare {
+    letter-spacing: .5em;
+    font-size: 2.5em;
+  }
+
+  #avi-picture-holder {
+  max-height: 66%;
+  min-height: 420px;
+  
+}
+
+#transparency-pane {
+  background-color: rgba(0,0,0,0);
+  min-height: 350px;
+  max-height: 60%;
+  width: 84%;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+}
