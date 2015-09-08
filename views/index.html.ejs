@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="semantic-ui/semantic.css">
 	<script src="scripts/jquery-2.1.4.min.js"></script>
 	<script src="semantic-ui/semantic.js"></script>
+	<script src="scripts/jquery.validate.min.js"></script>
 	<script src="scripts/main.js"></script>
 </head>
 <body id="body">
@@ -16,34 +17,68 @@
 	<div class="wrapper">
 		<h1 class="ui centered header" id="avi-declare">Avi Zacherman</h1>
 		<div class="ui center aligned one column grid">
-			
-				<div class="ui basic center aligned segment">
-					<div class="ui horizontal list" id="link-list">
-						<div class="item">
-							<i class="large github icon"></i>
-							<div class="content">
-								<div class="header">
-									GitHub
+			<div class="computer tablet only column">
+				<div class="ui basic segment">
+						<div class="ui horizontal list" id="link-list">
+							<div class="item">
+								<i class="large github icon"></i>
+								<div class="content">
+									<div class="header">
+										GitHub
+									</div>
+										<a href="https://github.com/Avizacherman/"> Avizacherman </a>
 								</div>
-									<a href="https://github.com/Avizacherman/"> Avizacherman </a>
+							</div>
+							<div class="item">
+								<i class="large linkedin square icon"></i>
+								<div class="content">
+									<div class="header">
+										LinkedIn
+									</div>
+										<a href="https://www.linkedin.com/profile/view?id=AAIAAAIvEW4Bfe11IzJ4mOv95JxLRRkFKwq7aMs"> Avi Zacherman </a>
+								</div>
+							</div>
+							<div class="item">
+								<i class="large suitcase icon"></i>
+								<div class="content">
+									<div class="header">
+										Resume
+									</div>
+										<a href="https://docs.google.com/document/d/188Ho55pQbAqEPN7NIdLrttk-W_09N26eGEtTIq0XsDs/edit?usp=sharing"> Avi Zacherman </a>
+								</div>
 							</div>
 						</div>
-						<div class="item">
-							<i class="large linkedin square icon"></i>
-							<div class="content">
-								<div class="header">
-									LinkedIn
+					</div>
+				</div>
+				<div class="mobile only column">
+					<div class="ui basic segment">
+						<div class="ui tiny horizontal list" id="mobile-list">
+							<div class="item">
+								<i class="github icon"></i>
+								<div class="content">
+									<div class="header">
+										GitHub
+									</div>
+										<a href="https://github.com/Avizacherman/"> Avizacherman </a>
 								</div>
-									<a href="https://www.linkedin.com/profile/view?id=AAIAAAIvEW4Bfe11IzJ4mOv95JxLRRkFKwq7aMs"> Avi Zacherman </a>
 							</div>
-						</div>
-						<div class="item">
-							<i class="large list icon"></i>
-							<div class="content">
-								<div class="header">
-									Resume
+							<div class="item">
+								<i class="linkedin square icon"></i>
+								<div class="content">
+									<div class="header">
+										LinkedIn
+									</div>
+										<a href="https://www.linkedin.com/profile/view?id=AAIAAAIvEW4Bfe11IzJ4mOv95JxLRRkFKwq7aMs"> Avi Zacherman </a>
 								</div>
-									<a href="https://docs.google.com/document/d/188Ho55pQbAqEPN7NIdLrttk-W_09N26eGEtTIq0XsDs/edit?usp=sharing"> Avi Zacherman </a>
+							</div>
+							<div class="item">
+								<i class="suitcase icon"></i>
+								<div class="content">
+									<div class="header">
+										Resume
+									</div>
+										<a href="https://docs.google.com/document/d/188Ho55pQbAqEPN7NIdLrttk-W_09N26eGEtTIq0XsDs/edit?usp=sharing"> Avi Zacherman </a>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -87,6 +122,48 @@
 					</div>
 				</div>
 			</div>
+		<div class="ui center aligned basic segment">
+			<div id="contact">
+				<a href="#" id="contact">Contact Me</a>
+			</div>
+		</div>
+	</div>
+</div>
+	<div class="ui modal" id="contact-modal">
+		<i class="close icon"> </i>
+		<div class="header">
+			Contact Me
+		</div>
+		<div class="content">
+			<form class="ui form" id="contact-form">
+				<div class="field">
+					<label> From </label>
+					<input class="contactForm" type="text" id="from" required placeholder="Your Name">
+				</div>
+				<div class="field">
+					<label> Email </label>
+					<input class="contactForm" type="text" id="fromEmail" required placeholder="Your Email" pattern="w+\@w+\w{2,3}">
+				</div>
+				<div class="field">
+					<label> Subject </label>
+					<input class="contactForm" type="text" id="subject" required placeholder="Subject">
+				</div>
+				<div class="field">
+					<label> Body </label>
+					<textarea class="contactForm"id="content" required></textarea>
+				</div>
+				<div class="actions">
+					<button class="ui blue left labeled icon button" id="submit">
+						<i class="send icon"></i>
+						Send
+					</button>
+					<div class="ui red cancel labeled icon button" id="cancel-modal">
+						<i class="cancel icon"></i>
+						Cancel
+					</div>
+				</div>
+
+			</form>
 		</div>
 	</div>
 </body>

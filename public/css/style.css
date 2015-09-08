@@ -7,14 +7,16 @@ body, head, html {
 .wrapper {
   position: relative;
   z-index: 1;
-  background: white;
+  background: rgb(255, 255, 247);
   box-shadow: -2px -2px 5px black;
 }
 
+
+
 #triangle {
   position: relative;
-  color: white;
-  margin-top: -80px;
+  color: rgb(255, 255, 252);
+  margin-top: -95px;
   margin-bottom: -36px;
   -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -35,6 +37,9 @@ body, head, html {
   text-align: left;
 } 
 
+#mobile-list {
+  text-align: center;
+}
 
 #avi-declare {
   letter-spacing: 1em;
