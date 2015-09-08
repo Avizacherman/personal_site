@@ -7,7 +7,6 @@
 	<link rel="stylesheet" href="semantic-ui/semantic.css">
 	<script src="scripts/jquery-2.1.4.min.js"></script>
 	<script src="semantic-ui/semantic.js"></script>
-	<script src="scripts/jquery.validate.min.js"></script>
 	<script src="scripts/main.js"></script>
 </head>
 <body id="body">
@@ -138,22 +137,22 @@
 			<form class="ui form" id="contact-form">
 				<div class="field">
 					<label> From </label>
-					<input class="contactForm" type="text" id="from" required placeholder="Your Name">
+					<input class="contactForm" type="text" id="from" name="from" placeholder="Your Name">
 				</div>
 				<div class="field">
 					<label> Email </label>
-					<input class="contactForm" type="text" id="fromEmail" required placeholder="Your Email" pattern="w+\@w+\w{2,3}">
+					<input class="contactForm" type="text" id="fromEmail" name="fromEmail" placeholder="Your Email">
 				</div>
 				<div class="field">
 					<label> Subject </label>
-					<input class="contactForm" type="text" id="subject" required placeholder="Subject">
+					<input class="contactForm" type="text" id="subject" name="subject" placeholder="Subject">
 				</div>
 				<div class="field">
 					<label> Body </label>
-					<textarea class="contactForm"id="content" required></textarea>
+					<textarea class="contactForm"id="content" name="content" ></textarea>
 				</div>
 				<div class="actions">
-					<button class="ui blue left labeled icon button" id="submit">
+					<button class="ui blue left labeled submit icon button" id="submit">
 						<i class="send icon"></i>
 						Send
 					</button>
