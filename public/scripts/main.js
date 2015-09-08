@@ -1,4 +1,41 @@
 $(document).ready(function() {
+	
+	//preload animated GIFs
+	var $ticTac = $('<img>').attr('src', 'img/tictactoe.gif').attr('id', 'ticTacImg')
+	var $wiki = $('<img>').attr('src', 'img/wiki.gif').attr('id', 'wikiImg')
+	var $jizo = $('<img>').attr('src', 'img/jizo.gif').attr('id', 'jizoImg')
+
+	var $holder = $('#image-holder')
+	
+
+	$('.projectList').each(function(){
+		$(this).on('mouseout', function(){
+			$holder.hide()
+		})
+	})
+
+	$('#ticTacToe').mouseover(function(e){
+		e.stopPropagation()
+		$holder.show()
+		$holder.children().first().remove()
+		$holder.append($ticTac)
+	})
+
+	$('#wiki').mouseover(function(e){
+		e.stopPropagation()
+		$holder.children().first().remove()
+		$holder.show()
+		$holder.append($wiki)
+	})
+
+		$('#jizo').mouseover(function(e){
+		e.stopPropagation()
+		$holder.show()
+		$holder.children().first().remove()
+		$holder.append($jizo)
+	})
+
+	//Form Validation
 	$('#contact-form').form({
 		on: 'submit',
 		inline: true,
@@ -38,6 +75,8 @@ $(document).ready(function() {
 
 		}
 	})
+
+	//Direct link to modal
 	if (window.location.hash === "#contact") {
 		$('#contact-modal').modal('show');
 	}
@@ -49,9 +88,11 @@ $(document).ready(function() {
 		$('#contact-modal').modal('show');
 	})
 
-	$('#contact-form').form('onSuccess', function() {
-
-
+	//submission form goes to AJAX route
+	$('#contact-form').on('submit', function(e){
+		e.preventDefault()
+		if ($('#contact-form').form('validate form')){
+				console.log('sup')
 		var params = {
 			content: $('#content').val(),
 			from: $('#from').val(),
@@ -64,9 +105,10 @@ $(document).ready(function() {
 			url: '/mail',
 			data: params
 		})
-
+		window.location.hash = ""
 		$('#contact-modal').modal('hide')
 
-	});
+	}
+	})
 
 });
