@@ -57,11 +57,11 @@ app.post('/mail', function(req, res){
 	})
 })
 
-app.listen(1500, function(err){
+app.listen(80, function(err){
 	if (err) throw err
 
 	console.log(cowsay.say({
-		text: "Listening on port 1500", 
+		text: "Listening on port 80", 
 		e: '--'
 	}))
 })
