@@ -8,27 +8,23 @@ $(document).ready(function() {
 	var $holder = $('#image-holder')
 	
 
-	$('.projectList').each(function(){
-		$(this).on('mouseout', function(){
-			$holder.hide()
-		})
-	})
+	
 
-	$('#ticTacToe').mouseover(function(e){
+	$('#ticTacToe').click(function(e){
 		e.stopPropagation()
 		$holder.show()
 		$holder.children().first().remove()
 		$holder.append($ticTac)
 	})
 
-	$('#wiki').mouseover(function(e){
+	$('#wiki').click(function(e){
 		e.stopPropagation()
 		$holder.children().first().remove()
 		$holder.show()
 		$holder.append($wiki)
 	})
 
-		$('#jizo').mouseover(function(e){
+		$('#jizo').click(function(e){
 		e.stopPropagation()
 		$holder.show()
 		$holder.children().first().remove()
@@ -109,6 +105,24 @@ $(document).ready(function() {
 		$('#contact-modal').modal('hide')
 
 	}
+
+
+
 	})
 
-});
+
+function slideChange(out, slideIn){
+	$('#' + out).fadeOut('slow')
+	$('#' + slideIn).fadeIn('slow')
+}
+
+var firstSlide = setInterval(function(){
+	slideChange('one', 'two')
+	var secondSlide = setTimeout(function(){
+	slideChange('two', 'one')
+}, 4000);
+
+}, 8000);
+
+
+})
