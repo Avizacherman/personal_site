@@ -7,7 +7,7 @@ var cowsay = require('cowsay');
 var ejs = require('ejs');
 var nodeMailer = require('nodemailer');
 
-var pass = process.env.gmailPW.trim()
+var pass = process.env.aword.trim()
 
 var transport = nodeMailer.createTransport({
 	service: "Gmail",

@@ -3,6 +3,22 @@ body, head, html {
   padding: 0;
 }
 
+li{
+  font-size: 150%;
+  line-height: 1.5em;
+}
+h3.ui.header{
+  font-size: 2.5rem; 
+}
+#avi-picture-background {
+  background: url('../img/background.png');
+  position: fixed; 
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
 
 .wrapper {
   position: relative;
@@ -55,7 +71,6 @@ body, head, html {
   top: 0;
   text-align: right;
   z-index: -1;
-
 }
 
 #one {
@@ -66,63 +81,24 @@ body, head, html {
   background: url('../img/avi-beer-img.jpg');
 }
 
+#three {
+  background: url('../img/avi-barrel-pic.jpg');
+}
+
+#four {
+  background: url('../img/avi-unisphere.jpg');
+
+}
+
+#five {
+  background: url('../img/avi-tie.jpg');
+
+}
+
 #five, #two, #three, #four {
 
   display: none;
 }
-
-/*
-@keyframes transition-bg {
-  20% {
-  transition: background-image 2s ease-in 5s;
-  -webkit-transition: background-image 2s ease-in 5s;
-   
-  }
-  21% {
-  background: url('../img/avi-beer-img.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;  
-  }
-  40% {
-  transition: background-image 2s ease-in 5s;
-  -webkit-transition: background-image 2s ease-in 5s;
-  background: url('../img/avi-grill-pic1.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;  
-  }
-  60% {
-      transition: background-image 2s ease-in 5s;
-      -webkit-transition: background-image 2s ease-in 5s;
-  
-  }
-  61% {
-
-  background: url('../img/avi-grill-pic1.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;  
-  }
-  80% {
-      transition: background-image 2s ease-in 5s;
-  -webkit-transition: background-image 2s ease-in 5s;
-  background: url('../img/avi-beer-img.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;  
-}
-  100%{
-  transition: background-image 2s ease-in 5s;
-  -webkit-transition: background-image 2s ease-in 5s;
-  background: url('../img/avi-grill-pic1.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;  
-  }
-  
-  
-}*/
 
 #transparency-pane {
   background-color: rgba(0,0,0,0);

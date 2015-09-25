@@ -9,10 +9,11 @@ $(document).ready(function() {
 	
 
 	
-
+//Click events for animated GIFs
 	$('#ticTacToe').click(function(e){
 		e.stopPropagation()
 		$holder.show()
+		$holder.html('')
 		$holder.children().first().remove()
 		$holder.append($ticTac)
 	})
@@ -20,6 +21,7 @@ $(document).ready(function() {
 	$('#wiki').click(function(e){
 		e.stopPropagation()
 		$holder.children().first().remove()
+		$holder.html('')
 		$holder.show()
 		$holder.append($wiki)
 	})
@@ -27,6 +29,7 @@ $(document).ready(function() {
 		$('#jizo').click(function(e){
 		e.stopPropagation()
 		$holder.show()
+		$holder.html('')
 		$holder.children().first().remove()
 		$holder.append($jizo)
 	})
@@ -111,18 +114,40 @@ $(document).ready(function() {
 	})
 
 
-function slideChange(out, slideIn){
-	$('#' + out).fadeOut('slow')
-	$('#' + slideIn).fadeIn('slow')
+function slideChange(slideOut, slideIn){
+	$('#' + slideOut).fadeOut('slow') 	//sets outgoing slide to fade out
+	$('#' + slideIn).fadeIn('slow')  //sets incoming slide to fade in
 }
 
-var firstSlide = setInterval(function(){
-	slideChange('one', 'two')
+//DRY Set
+function slideShow(){  			//creates a series of three second intervals, staggered with slide changes
+	var firstSlide = setTimeout(function(){
+			slideChange('one', 'two') 
+		}, 3000)
+
 	var secondSlide = setTimeout(function(){
-	slideChange('two', 'one')
-}, 4000);
+		slideChange('two', 'three')
+		}, 6000);
 
-}, 8000);
+	var thirdSlide = setTimeout(function(){
+		slideChange('three', 'four')
+		}, 9000);
 
+	var fourthSlide = setTimeout(function(){
+			slideChange('four', 'five')
+		}, 12000)
+
+	var fifthSlide = setTimeout(function(){
+		slideChange('five', 'one')
+		}, 15000);
+	}
+//initial set
+slideShow()
+//Repeating Set
+var slides = setInterval(function(){
+	
+	slideShow()
+
+}, 15000)
 
 })
