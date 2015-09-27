@@ -8,33 +8,65 @@ $(document).ready(function() {
 	var $jizo = $('<img>').attr('src', 'img/jizo.gif').attr('id', 'jizoImg');
 	var $phoodography = $('<img>').attr('src', 'img/phoodography.gif').attr('id', 'phoodographyImg')
 
+	var beer = 'img/beer.png'
+	var boardGames = 'img/boardgames.png'
+	var cooking = 'img/cooking.png'
+	var exploring = 'img/explore.png'
+	var ramen = 'img/ramen.png'
 
 	var $holder = $('#image-holder');
 	var $linker = $('#linker');
 
 //Animated Gif Rotator
 	var targetArray = [$ticTac, $wiki, $jizo, $phoodography];
+	var hobbyArray = [beer, boardGames, cooking, exploring, ramen]
+
 	var linkArray = ["http://avizacherman.github.io", "http://104.131.4.248:1337", "https://jizomap.herokuapp.com", "https://phoodography.herokuapp.com"]
-	var itemArray = [$('#ticTacToe'), $('#wiki'), $('#jizo'), $('#phoodography')];
-	var itemIndex = 0;
+
+	var hobbyItemArray = [$('#beer'), $('#board-games'), $('#cooking'), $('#exploring'), $('#ramen')]	
+	var projectItemArray = [$('#ticTacToe'), $('#wiki'), $('#jizo'), $('#phoodography')];
+	
+
+	var projectIndex = 1;
+	var hobbyIndex = 1;
+
+	var hobbyRotation = setInterval(() => {
+		$('#hobby-image').attr('src', hobbyArray[hobbyIndex])
+			
+			hobbyItemArray.forEach((item, index)=> {
+			
+			if(hobbyIndex === index){
+				item.addClass('highlighted')
+			} else {
+				item.removeClass('highlighted')
+			}
+		})
+
+			hobbyIndex++
+
+		if(hobbyIndex === hobbyArray.length){
+			hobbyIndex = 0
+		}
+
+	}, 3500)
 
 	var projectRotation = setInterval(function(){
 		$holder.children().first().remove()
 
-		$holder.append(targetArray[itemIndex])
-		$linker.attr('href', linkArray[itemIndex]).text(linkArray[itemIndex])
-		itemArray.forEach((item, index)=> {
-			if(itemIndex === index){
+		$holder.append(targetArray[projectIndex])
+		$linker.attr('href', linkArray[projectIndex]).text(linkArray[projectIndex])
+		projectItemArray.forEach((item, index)=> {
+			if(projectIndex === index){
 				item.addClass('highlighted')
 			} else {
 				item.removeClass('highlighted')
 			}
 
 		})
-		itemIndex++
+		projectIndex++
 
-		if(itemIndex === targetArray.length){
-			itemIndex = 0
+		if(projectIndex === targetArray.length){
+			projectIndex = 0
 		}
 	}, 3500);
 

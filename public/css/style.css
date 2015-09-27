@@ -21,6 +21,14 @@ h3.ui.header{
   z-index: -1;
 }
 
+#hobby-image {
+  
+}
+
+.projectList:hover {
+  cursor: pointer;
+}
+
 .highlighted {
   border-style: solid;
   border-width: 3px;
