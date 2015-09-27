@@ -7,19 +7,21 @@ $(document).ready(function() {
 	var $wiki = $('<img>').attr('src', 'img/wiki.gif').attr('id', 'wikiImg');
 	var $jizo = $('<img>').attr('src', 'img/jizo.gif').attr('id', 'jizoImg');
 
-	var $holder = $('#image-holder');
 
+	var $holder = $('#image-holder');
+	var $linker = $('#linker');
 
 //Animated Gif Rotator
 	var targetArray = [$ticTac, $wiki, $jizo];
+	var linkArray = ["http://avizacherman.github.io", "http://104.131.4.248:1337", "https://jizomap.herokuapp.com"]
 	var itemArray = [$('#ticTacToe'), $('#wiki'), $('#jizo')];
 	var itemIndex = 0;
 
 	var projectRotation = setInterval(function(){
-		$holder.show()
-		$holder.html('')
 		$holder.children().first().remove()
+
 		$holder.append(targetArray[itemIndex])
+		$linker.attr('href', linkArray[itemIndex]).text(linkArray[itemIndex])
 		itemArray.forEach((item, index)=> {
 			if(itemIndex === index){
 				item.addClass('highlighted')
@@ -39,8 +41,6 @@ $(document).ready(function() {
 //Click events for animated GIFs
 	$('#ticTacToe').click(function(e){
 		e.stopPropagation()
-		$holder.show()
-		$holder.html('')
 		$holder.children().first().remove()
 		$holder.append($ticTac)
 	})
@@ -48,15 +48,11 @@ $(document).ready(function() {
 	$('#wiki').click(function(e){
 		e.stopPropagation()
 		$holder.children().first().remove()
-		$holder.html('')
-		$holder.show()
 		$holder.append($wiki)
 	})
 
 		$('#jizo').click(function(e){
 		e.stopPropagation()
-		$holder.show()
-		$holder.html('')
 		$holder.children().first().remove()
 		$holder.append($jizo)
 	})
