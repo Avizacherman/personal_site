@@ -6,15 +6,16 @@ $(document).ready(function() {
 	var $ticTac = $('<img>').attr('src', 'img/tictactoe.gif').attr('id', 'ticTacImg');
 	var $wiki = $('<img>').attr('src', 'img/wiki.gif').attr('id', 'wikiImg');
 	var $jizo = $('<img>').attr('src', 'img/jizo.gif').attr('id', 'jizoImg');
+	var $phoodography = $('<img>').attr('src', 'img/phoodography.gif').attr('id', 'phoodographyImg')
 
 
 	var $holder = $('#image-holder');
 	var $linker = $('#linker');
 
 //Animated Gif Rotator
-	var targetArray = [$ticTac, $wiki, $jizo];
-	var linkArray = ["http://avizacherman.github.io", "http://104.131.4.248:1337", "https://jizomap.herokuapp.com"]
-	var itemArray = [$('#ticTacToe'), $('#wiki'), $('#jizo')];
+	var targetArray = [$ticTac, $wiki, $jizo, $phoodography];
+	var linkArray = ["http://avizacherman.github.io", "http://104.131.4.248:1337", "https://jizomap.herokuapp.com", "https://phoodography.herokuapp.com"]
+	var itemArray = [$('#ticTacToe'), $('#wiki'), $('#jizo'), $('#phoodography')];
 	var itemIndex = 0;
 
 	var projectRotation = setInterval(function(){
@@ -43,19 +44,29 @@ $(document).ready(function() {
 		e.stopPropagation()
 		$holder.children().first().remove()
 		$holder.append($ticTac)
+		clearInterval(projectRotation)
 	})
 
 	$('#wiki').click(function(e){
 		e.stopPropagation()
 		$holder.children().first().remove()
 		$holder.append($wiki)
+		clearInterval(projectRotation)
 	})
 
 		$('#jizo').click(function(e){
 		e.stopPropagation()
 		$holder.children().first().remove()
 		$holder.append($jizo)
+		clearInterval(projectRotation)
 	})
+
+	$('#phoodography').click(function(e){
+		e.stopPropagation()
+		$holder.children().first().remove()
+		$holder.append($phoodography)
+		clearInterval(projectRotation)
+	})	
 
 	//Form Validation
 	$('#contact-form').form({
