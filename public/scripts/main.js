@@ -1,12 +1,39 @@
+//The purpose of this file is to provide a level of functionality to my personal website. The code is intentionally not DRY, but rather written as simple as possible. 
+
 $(document).ready(function() {
 	
 	//preload animated GIFs
-	var $ticTac = $('<img>').attr('src', 'img/tictactoe.gif').attr('id', 'ticTacImg')
-	var $wiki = $('<img>').attr('src', 'img/wiki.gif').attr('id', 'wikiImg')
-	var $jizo = $('<img>').attr('src', 'img/jizo.gif').attr('id', 'jizoImg')
+	var $ticTac = $('<img>').attr('src', 'img/tictactoe.gif').attr('id', 'ticTacImg');
+	var $wiki = $('<img>').attr('src', 'img/wiki.gif').attr('id', 'wikiImg');
+	var $jizo = $('<img>').attr('src', 'img/jizo.gif').attr('id', 'jizoImg');
 
-	var $holder = $('#image-holder')
-	
+	var $holder = $('#image-holder');
+
+
+//Animated Gif Rotator
+	var targetArray = [$ticTac, $wiki, $jizo];
+	var itemArray = [$('#ticTacToe'), $('#wiki'), $('#jizo')];
+	var itemIndex = 0;
+
+	var projectRotation = setInterval(function(){
+		$holder.show()
+		$holder.html('')
+		$holder.children().first().remove()
+		$holder.append(targetArray[itemIndex])
+		itemArray.forEach((item, index)=> {
+			if(itemIndex === index){
+				item.addClass('highlighted')
+			} else {
+				item.removeClass('highlighted')
+			}
+
+		})
+		itemIndex++
+
+		if(itemIndex === targetArray.length){
+			itemIndex = 0
+		}
+	}, 3500);
 
 	
 //Click events for animated GIFs
