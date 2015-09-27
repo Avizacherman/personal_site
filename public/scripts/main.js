@@ -44,6 +44,8 @@ $(document).ready(function() {
 		e.stopPropagation()
 		$holder.children().first().remove()
 		$holder.append($ticTac)
+		$linker.attr('href', linkArray[0]).text(linkArray[0])
+		$('#projects').children().removeClass('highlighted')
 		clearInterval(projectRotation)
 	})
 
@@ -51,6 +53,8 @@ $(document).ready(function() {
 		e.stopPropagation()
 		$holder.children().first().remove()
 		$holder.append($wiki)
+		$linker.attr('href', linkArray[1]).text(linkArray[1])
+		$('#projects').children().removeClass('highlighted')		
 		clearInterval(projectRotation)
 	})
 
@@ -58,6 +62,8 @@ $(document).ready(function() {
 		e.stopPropagation()
 		$holder.children().first().remove()
 		$holder.append($jizo)
+		$linker.attr('href', linkArray[2]).text(linkArray[2])
+		$('#projects').children().removeClass('highlighted')		
 		clearInterval(projectRotation)
 	})
 
@@ -65,6 +71,8 @@ $(document).ready(function() {
 		e.stopPropagation()
 		$holder.children().first().remove()
 		$holder.append($phoodography)
+		$linker.attr('href', linkArray[3]).text(linkArray[3])
+		$('#projects').children().removeClass('highlighted')		
 		clearInterval(projectRotation)
 	})	
 
