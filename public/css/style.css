@@ -29,6 +29,10 @@ h3.ui.header{
   cursor: pointer;
 }
 
+.hobbyList:hover {
+  cursor: pointer;
+}
+
 .highlighted {
   border-style: solid;
   border-width: 3px;
