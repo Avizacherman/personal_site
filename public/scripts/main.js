@@ -3,10 +3,10 @@
 $(document).ready(function() {
 	
 	//preload animated GIFs
-	var $ticTac = $('<img>').attr('src', 'img/tictactoe.gif').attr('id', 'ticTacImg');
-	var $wiki = $('<img>').attr('src', 'img/wiki.gif').attr('id', 'wikiImg');
-	var $jizo = $('<img>').attr('src', 'img/jizo.gif').attr('id', 'jizoImg');
-	var $phoodography = $('<img>').attr('src', 'img/phoodography.gif').attr('id', 'phoodographyImg')
+	var $ticTac = $('<img>').attr('src', 'img/tictactoe.gif').attr('id', 'ticTacImg').addClass('detail-pic');
+	var $wiki = $('<img>').attr('src', 'img/wiki.gif').attr('id', 'wikiImg').addClass('detail-pic');
+	var $jizo = $('<img>').attr('src', 'img/jizo.gif').attr('id', 'jizoImg').addClass('detail-pic');
+	var $phoodography = $('<img>').attr('src', 'img/phoodography.gif').attr('id', 'phoodographyImg').addClass('detail-pic')
 
 	var beer = 'img/beer.png'
 	var boardGames = 'img/boardgames.png'
@@ -78,6 +78,7 @@ $(document).ready(function() {
 		$holder.append($ticTac)
 		$linker.attr('href', linkArray[0]).text(linkArray[0])
 		$('#projects').children().removeClass('highlighted')
+		$(this).addClass('highlighted')
 		clearInterval(projectRotation)
 	})
 
@@ -86,7 +87,8 @@ $(document).ready(function() {
 		$holder.children().first().remove()
 		$holder.append($wiki)
 		$linker.attr('href', linkArray[1]).text(linkArray[1])
-		$('#projects').children().removeClass('highlighted')		
+		$('#projects').children().removeClass('highlighted')
+		$(this).addClass('highlighted')		
 		clearInterval(projectRotation)
 	})
 
@@ -96,6 +98,7 @@ $(document).ready(function() {
 		$holder.append($jizo)
 		$linker.attr('href', linkArray[2]).text(linkArray[2])
 		$('#projects').children().removeClass('highlighted')		
+		$(this).addClass('highlighted')
 		clearInterval(projectRotation)
 	})
 
@@ -105,9 +108,49 @@ $(document).ready(function() {
 		$holder.append($phoodography)
 		$linker.attr('href', linkArray[3]).text(linkArray[3])
 		$('#projects').children().removeClass('highlighted')		
+		$(this).addClass('highlighted')
 		clearInterval(projectRotation)
 	})	
 
+	$('#beer').click(function(e){
+		e.stopPropagation()
+		$('#hobby-image').attr('src', hobbyArray[0])
+		$('#hobbies').children().removeClass('highlighted')
+		$(this).addClass('highlighted')
+		clearInterval(hobbyRotation)
+	})	
+
+	$('#board-games').click(function(e){
+		e.stopPropagation()
+		$('#hobby-image').attr('src', hobbyArray[1])
+		$('#hobbies').children().removeClass('highlighted')
+		$(this).addClass('highlighted')
+		clearInterval(hobbyRotation)
+	})	
+
+	$('#cooking').click(function(e){
+		e.stopPropagation()
+		$('#hobby-image').attr('src', hobbyArray[2])
+		$('#hobbies').children().removeClass('highlighted')
+		$(this).addClass('highlighted')
+		clearInterval(hobbyRotation)
+	})			
+
+	$('#exploring').click(function(e){
+		e.stopPropagation()
+		$('#hobby-image').attr('src', hobbyArray[3])
+		$('#hobbies').children().removeClass('highlighted')
+		$(this).addClass('highlighted')
+		clearInterval(hobbyRotation)
+	})	
+
+	$('#ramen').click(function(e){
+		e.stopPropagation()
+		$('#hobby-image').attr('src', hobbyArray[4])
+		$('#hobbies').children().removeClass('highlighted')
+		$(this).addClass('highlighted')
+		clearInterval(hobbyRotation)
+	})		
 	//Form Validation
 	$('#contact-form').form({
 		on: 'submit',
