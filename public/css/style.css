@@ -86,10 +86,11 @@ h3.ui.header{
   position: fixed; 
   max-height: 20%;
   min-height: 300px;
-  width: 84%;
   left: 8%;
   top: 0;
   text-align: right;
+  background-size: cover;
+  background-repeat: no-repeat;
   z-index: -1;
 }
 
