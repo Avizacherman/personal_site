@@ -15,7 +15,7 @@ h3.ui.header{
   background: url('../img/background.png');
   position: fixed; 
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   height: 100%;
   width: 100%;
   left: 0;
