@@ -8,7 +8,7 @@ var ejs = require('ejs');
 var nodeMailer = require('nodemailer');
 
 var pass = process.env.aword.trim()
-
+console.log(pass)
 var transport = nodeMailer.createTransport({
 	service: "Gmail",
 
