@@ -46,7 +46,8 @@ app.post('/mail', function(req, res){
  		   status: 500,
  		   error: error
 			}
-			throw error
+			console.log(error)
+			console.log(req.body.content)
 		} else {
 			var response = {
 				status: 200,
