@@ -30,6 +30,19 @@ app.get('/', function(req, res){
 	res.render('index.html.ejs')
 })
 
+app.get('/lineup', function(req, res){
+	var test = {
+		name: "Joe Designer",
+		experience: 10,
+		skills: ['Adobe InDesign, Adobe Illustrator, Adobe Photoshop'],
+		availability: {
+			dayRange: [['1-OCT-2015, 30-NOV-2015'], ['15-FEB-2016', '30-JUN-2016']],
+			monthRange: [['OCT', 'NOV'], ['MAR', 'JUN']]
+		}
+
+	}
+	res.json(test)
+})
 
 app.post('/mail', function(req, res){
 	console.log(req.body)
