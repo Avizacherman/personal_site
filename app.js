@@ -47,6 +47,10 @@ app.get('/lineup', function(req, res){
 	res.json(test)
 })
 
+app.get('/concept', function(req, res){
+	res.render('concept.html.ejs')
+})
+
 app.post('/mail', function(req, res){
 	console.log(req.body)
 	var mailOptions = {

@@ -1,1 +1,36 @@
-concept.html.ejs
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Concept</title>
+	<link rel="stylesheet" href="semantic-ui/semantic.css">
+	<link rel="stylesheet" href="css/concept.css">
+	<script src="scripts/jquery-2.1.4.min.js"></script>
+	<script src="semantic-ui/semantic.js"></script>
+	<script src="scripts/concept.js"></script>
+</head>
+<body>
+	<div id="content">
+		<div class="ui twelve column centered grid">
+			<div class="row">
+				<div class="nine wide column">
+					<h1 class="center aligned header" id="name"></h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="eight wide column">
+					<h2> Available: 
+						<span id="availability"></span>
+					</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="eight wide column">
+					<input type="date" id="date">
+					<button id="check-date" class="ui tiny green button"> Check Availability </button>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
