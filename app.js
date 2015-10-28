@@ -30,17 +30,20 @@ app.get('/', function(req, res){
 	res.render('index.html.ejs')
 })
 
+var date1 = new Date(2015, 9, 1)
+var date2 = new Date(2015, 10, 30)
+var date3 = new Date(2016, 1, 15)
+var date4 = new Date(2016, 5, 30)
+
 app.get('/lineup', function(req, res){
 	var test = {
 		name: "Joe Designer",
 		experience: 10,
 		skills: ['Adobe InDesign, Adobe Illustrator, Adobe Photoshop'],
-		availability: {
-			dayRange: [['1-OCT-2015, 30-NOV-2015'], ['15-FEB-2016', '30-JUN-2016']],
-			monthRange: [['OCT', 'NOV'], ['MAR', 'JUN']]
+		availability: [[date1, date2], [date3, date4]]
 		}
 
-	}
+	
 	res.json(test)
 })
 
