@@ -40,7 +40,7 @@ app.get('/lineup', function(req, res){
 		name: "Joe Designer",
 		experience: 10,
 		skills: ['Adobe InDesign, Adobe Illustrator, Adobe Photoshop'],
-		availability: [[date1, date2], [date3, date4]]
+		availability: [{begin: date1, end: date2} {begin: date3, end: date4}]
 		}
 
 	

@@ -2,7 +2,7 @@ function checkAvailability(date, availability){
 	var available = false
 
 	for(var range in availability){
-					if(date > new Date(availability[range][0]) && date < new Date(availability[range][1])){
+					if(date > new Date(availability[range].begin) && date < new Date(availability[range].end)){
 						$('#availability').text('Yes').addClass('yes').removeClass('no')
 						available = true
 						break
@@ -17,7 +17,7 @@ function checkAvailability(date, availability){
 $(document).ready(()=>{
 	$.get('/lineup')
 		.done(data=>{
-			$('#name').text(data.name)
+					$('#name').text(data.name)
 			checkAvailability(new Date, data.availability)
 			$('#check-date').on('click', ()=>{
 				if($('#date').val() != ""){

@@ -4,7 +4,7 @@ function checkAvailability(date, availability) {
 	var available = false;
 
 	for (var range in availability) {
-		if (date > new Date(availability[range][0]) && date < new Date(availability[range][1])) {
+		if (date > new Date(availability[range].begin) && date < new Date(availability[range].end)) {
 			$('#availability').text('Yes').addClass('yes').removeClass('no');
 			available = true;
 			break;
@@ -17,7 +17,6 @@ function checkAvailability(date, availability) {
 
 $(document).ready(function () {
 	$.get('/lineup').done(function (data) {
-		console.log(data);
 		$('#name').text(data.name);
 		checkAvailability(new Date(), data.availability);
 		$('#check-date').on('click', function () {
@@ -28,6 +27,5 @@ $(document).ready(function () {
 		});
 	});
 });
-//# sourceMappingURL=concept.es6.js.map
 
 //# sourceMappingURL=concept.js.map
