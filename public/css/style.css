@@ -67,6 +67,7 @@ h3.ui.header{
   background-image: url('../img/asfalt-dark.png');
   box-shadow: -2px -2px 5px black;
   width: 100%;
+  overflow-x: hidden;
 }
 
 
