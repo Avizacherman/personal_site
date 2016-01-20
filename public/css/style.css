@@ -19,8 +19,10 @@ h3.ui.header{
   flex-flow:column wrap;
 }
 
-.flex-paragraph {
+.flex-centered-container p {
   width: 75%;
+  font-size: 125%;
+  text-align: justify;
 }
 
 
@@ -34,18 +36,16 @@ h3.ui.header{
 
 .flex-project-item {
   margin: 1% 0;
-  height: 210px;
-  width: 280px;
-
 }
 
-.flex-project-subhead {
+.flex-project-item h4 {
   text-align: center;
 }
 
-.project-img {
+.flex-project-item img {
   height: 180px;
   width: 320px;
+  z-index: 2;
 }
 
 #avi-picture-background {
@@ -58,25 +58,6 @@ h3.ui.header{
   left: 0;
   top: 0;
   z-index: -1;
-}
-
-.detail-pic {
-  box-shadow: -2px 2px 6px grey;
-}
-
-.projectList:hover {
-  cursor: pointer;
-}
-
-.hobbyList:hover {
-  cursor: pointer;
-}
-
-.highlighted {
-  border-style: solid;
-  border-width: 3px;
-  display: inline-block;
-  border-color: red;
 }
 
 .wrapper {
