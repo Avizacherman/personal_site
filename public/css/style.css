@@ -29,9 +29,13 @@ h3.ui.header{
 .flex-project-container {
   display: flex;
   margin: 0 auto;
-  justify-content: space-around;
+  justify-content: center;
   width: 75%;
   flex-wrap: wrap;
+}
+
+.flex-project-item {
+  margin: 0 1%;
 }
 
 .flex-project-item h4 {
