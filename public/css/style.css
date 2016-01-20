@@ -82,8 +82,10 @@ h3.ui.header{
 .wrapper {
   position: relative;
   z-index: 1;
-  background: rgb(255, 255, 247);
+  background-color: rgb(255, 255, 247);
+  background-image: url('../img/asfalt-dark.png');
   box-shadow: -2px -2px 5px black;
+
 }
 
 
