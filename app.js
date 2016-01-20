@@ -81,7 +81,7 @@ app.listen(process.env.PORT || 1500, function(err){
 	if (err) throw err
 
 	console.log(cowsay.say({
-		text: "Listening on port " + process.env.PORT || 1500,
+		text: "Listening on port " + (process.env.PORT || 1500) + "\n Operating on process ID: " + process.pid ,
 		e: '--'
 	}))
 })
