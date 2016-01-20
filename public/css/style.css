@@ -34,10 +34,6 @@ h3.ui.header{
   flex-wrap: wrap;
 }
 
-.flex-project-item {
-  margin: 1% 0;
-}
-
 .flex-project-item h4 {
   text-align: center;
 }
