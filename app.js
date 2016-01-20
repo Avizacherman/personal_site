@@ -8,7 +8,6 @@ var ejs = require('ejs');
 var nodeMailer = require('nodemailer');
 
 var pass = process.env.aword.trim()
-console.log(pass)
 var transport = nodeMailer.createTransport({
 	service: "Gmail",
 
@@ -43,7 +42,7 @@ app.get('/lineup', function(req, res){
 		availability: [{begin: date1, end: date2}, {begin: date3, end: date4}]
 		}
 
-	
+
 	res.json(test)
 })
 
@@ -78,11 +77,11 @@ app.post('/mail', function(req, res){
 	})
 })
 
-app.listen(1500, function(err){
+app.listen(process.env.PORT || 1500, function(err){
 	if (err) throw err
 
 	console.log(cowsay.say({
-		text: "Listening on port 1500", 
+		text: "Listening on port " + process.env.PORT || 1500,
 		e: '--'
 	}))
 })
