@@ -1,5 +1,19 @@
 .cart-items{
   font-size: 3em;
   text-align: center;
-  margin: 5% 0;
+  padding: 5% 0;
+}
+
+.overlay-button{
+  cursor: pointer;
+  background: black;
+  color: white;
+  fontWeight: bolder;
+  lineHeight: 30px;
+  height: 30px;
+  width: 60px;
+}
+
+.overlay-button:hover{
+  background: grey;
 }
