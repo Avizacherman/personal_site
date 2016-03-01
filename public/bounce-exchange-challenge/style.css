@@ -8,11 +8,11 @@
   cursor: pointer;
   background: black;
   color: white;
-  font-size: 300%;
+  font-size: 200%;
   font-weight: bolder;
-  line-height: 90px;
-  height: 90px;
-  width: 180px;
+  line-height: 60px;
+  height: 60px;
+  width: 120px;
 }
 
 .overlay-button:hover {
